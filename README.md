@@ -4,6 +4,8 @@ A simple, fast, and user-friendly Todo Application that helps users organize the
 
 Built with clean UI, smooth interactions, and efficient task management.
 
+Goto - https://pranav00076.github.io/Todo-App/
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🛠️ Tech Stack
