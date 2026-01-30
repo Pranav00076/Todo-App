@@ -1,48 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 2em;
-  background-color: #e5e5e5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 1em;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #2a314d, #d7afff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: #333;
 }
 
-.app {
-  background-color: #fff;
-  width: 80vw;
-  height: 80vh;
-  border: 5px solid #efd57d;
-  border-radius: 8px;
-  padding: 15px;
-  overflow-y: scroll;
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-.app::-webkit-scrollbar{
-  width: 0 !important;
-}
-
-#tasks {
-  display: grid;
-  font-size: large;
-  grid-template-columns: 1fr;
-  gap: 14px;
-}
-
-#tasks div {
-  border: 3px solid #3727e6;
-  background-color: #becdf3;
-  border-radius: 6px;
-  padding: 5px;
-  display: grid;
-  gap: 4px;
-}
-#add{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+input {
+    width: 300px;
+    padding: 10px 14px;
+    border-radius: 8px;
     border: none;
-    background-color: rgb(76, 227, 81);
-    color:black;
-    scale: 1.4;
+    outline: none;
+    font-size: 16px;
+}
+
+#add {
     margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    background: #003b16;
+    color: white;
+    transition: 0.2s;
+}
+
+#add:hover {
+    background: #16a34a;
+}
+
+#error {
+    color: #ffdddd;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#container {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+#container > div {
+    background: white;
+    width: 550px;
+    min-height: 500px;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #e7e9ec;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    animation: fadeIn 0.3s ease;
+}
+
+li span {
+    flex: 1;
+    font-weight: 500;
+}
+
+/* Buttons inside todo */
+li button {
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+/* Status button */
+li button:nth-child(2) {
+    background: #ced0d5;
+}
+
+/* Update */
+li button:nth-child(3) {
+    background: #3b82f6;
+    color: white;
+}
+
+li button:nth-child(3):hover {
+    background: #2563eb;
+}
+
+/* Delete */
+li button:nth-child(4) {
+    background: #ef4444;
+    color: white;
+}
+
+li button:nth-child(4):hover {
+    background: #dc2626;
+}
+
+/* Completed styling */
+#compllist li span {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 800px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #container > div {
+        width: 90vw;
+    }
 }
