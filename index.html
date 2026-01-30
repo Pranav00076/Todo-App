@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ToDo APP</h1>
-    <input type="text" id="input" >
-    <button id="add" onclick="takeAction()">ADD</button>
+    <h1>The Ultimate ToDo APP</h1>
+    <div id="Inputscont">
+        <div>
+            <input type="text" id="input" >
+            <button id="add" onclick="takeAction()">ADD</button>
+        </div>
+        <div>
+            <input type="text" id="search">
+            <button id="searchbtn" onclick="search()">Search</button>
+        </div>
+    </div>
     <p id="error"></p>
     <div id="container">
         <div>

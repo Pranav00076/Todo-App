@@ -6,6 +6,7 @@ const addbtn = document.getElementById("add")
 const pending = document.getElementById("pending");
 const compllist = document.getElementById("compllist")
 const errormsg = document.getElementById("error");
+const sreachinput = document.getElementById("search")
 
 function takeAction(){
     if (editingId === null) {
@@ -84,3 +85,16 @@ function renderTodos(){
         }
     }
 }
+var items = document.getElementsByTagName("li");
+sreachinput.addEventListener('input',()=>{
+    var query = sreachinput.value.toLowerCase();
+    for (var i = 0; i < items.length; i++) {
+    var text = items[i].innerText.toLowerCase();
+    if (text.indexOf(query) !== -1) {
+      items[i].style.display = "list-item";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+})
+renderTodos()

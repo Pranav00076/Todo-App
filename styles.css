@@ -28,8 +28,11 @@ input {
     outline: none;
     font-size: 16px;
 }
+#search{
+    margin-top: 7px ;
+}
 
-#add {
+#add,#searchbtn {
     margin-left: 10px;
     margin-top: 10px;
     padding: 10px 18px;
@@ -51,6 +54,11 @@ input {
     color: #ffdddd;
     margin: 10px 0;
     font-size: 20px;
+}
+#Inputscont{
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
 }
 
 #container {
