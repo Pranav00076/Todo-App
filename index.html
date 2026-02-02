@@ -1,34 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <h1>The Ultimate ToDo APP</h1>
     <div id="Inputscont">
-        <div>
-            <input type="text" id="input" >
-            <button id="add" onclick="takeAction()">ADD</button>
-        </div>
-        <div>
-            <input type="text" id="search">
-            <button id="searchbtn" onclick="search()">Search</button>
-        </div>
+      <div>
+        <input type="text" id="input" placeholder="Add New Tasks" />
+        <input type="date" id="dateinput" />
+        <button id="add" onclick="takeAction()">ADD</button>
+      </div>
+      <div id="label-bar">
+        <input type="text" id="newlabel" placeholder="Add label" />
+        <button onclick="addLabel()">+</button>
+        <div id="labels"></div>
+      </div>
+      <div>
+        <input type="text" id="search" placeholder="Search" />
+        <button id="searchbtn" onclick="search()">Search</button>
+      </div>
     </div>
     <p id="error"></p>
     <div id="container">
-        <div>
-            <h2>Pending Task</h2>
-            <ul id="pending"></ul>
-        </div>
-        <div>
-            <h2>Completed Task</h2>
-            <ul id="compllist"></ul>
-        </div>
+      <div>
+        <h2>Pending Task</h2>
+        <ul id="pending">
+          <p>Nothing Pending! Maze hain<span>✌️</span></p>
+        </ul>
+      </div>
+      <div>
+        <h2>Completed Task</h2>
+        <ul id="compllist">
+          <p>Nothing Completed!! Kaam Karo<span>🥸</span></p>
+        </ul>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
